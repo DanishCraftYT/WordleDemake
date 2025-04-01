@@ -1,6 +1,6 @@
-import requests
+import random
 
 class RandomWord:
-    @staticmethod
-    def get_word(): # gets a random 5 letter word from a website.
-        return requests.get("https://random-word-api.herokuapp.com/word?length=5").text.replace("[", "").replace("\"", "").replace("]", "")
+    word_list: list[str] = ["apple", "grape", "peach", "berry", "melon", "mango", "lemon", "plum", "kiwi", "cherry"]
+    def get_word(self) -> str: # gets a random 5 letter word from a website.
+        return random.choice(self.word_list)

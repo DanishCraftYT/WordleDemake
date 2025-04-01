@@ -27,3 +27,7 @@ class Wordle():
 
     def quit_wordle(self) -> None: # quit wordle main menu.
         self.main_menu.quit()
+
+
+if __name__ == "__main__":
+    wordle = Wordle()
